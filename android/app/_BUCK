@@ -3,6 +3,7 @@
 # - install Buck
 # - `npm start` - to start the packager
 # - `cd android`
+# - `keytool -genkey -v -keystore ./yzmapp.keystore -storepass yzmapp -alias yzmappkey -keypass yzmapp -dname "CN=yzm app,O=Android,C=US" -validity 10000`
 # - `keytool -genkey -v -keystore keystores/debug.keystore -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US"`
 # - `./gradlew :app:copyDownloadableDepsToLibs` - make all Gradle compile dependencies available to Buck
 # - `buck install -r android/app` - compile, install and run application
