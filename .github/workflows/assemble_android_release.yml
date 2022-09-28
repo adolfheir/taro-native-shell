@@ -24,13 +24,13 @@ env:
   # 版本号
   VERSION_CODE: 10
   # 密钥库文件
-  KEYSTORE_FILE: debug.keystore
+  KEYSTORE_FILE: yzmapp.keystore
   # 密钥库口令
-  KEYSTORE_PASSWORD: android
+  KEYSTORE_PASSWORD: yzmapp
   # 密钥库别名
-  KEYSTORE_KEY_ALIAS: androiddebugkey
+  KEYSTORE_KEY_ALIAS: yzmappkey
   # 密钥库别名口令
-  KEYSTORE_KEY_PASSWORD: android
+  KEYSTORE_KEY_PASSWORD: yzmapp
 
 # 工作流作业
 jobs:
@@ -84,7 +84,7 @@ jobs:
           bundle update
           bundle exec fastlane assemble
         env:
-          KEYSTORE_FILE: ${{ github.workspace }}/android/app/${{ env.KEYSTORE_FILE }}
+          KEYSTORE_FILE: ${{ github.workspace }}/${{ env.KEYSTORE_FILE }}
       - name: Upload Android Products
         uses: actions/upload-artifact@v2
         with:
