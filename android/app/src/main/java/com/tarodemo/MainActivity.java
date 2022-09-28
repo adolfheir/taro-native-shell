@@ -13,7 +13,9 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "taroDemo";
+    // unicode \u4f18\u8d5a\u76df=优赚盟
+    // see https://github.com/NervJS/taro/issues/12245
+    return "\u4f18\u8d5a\u76df";
   }
 
   /**
